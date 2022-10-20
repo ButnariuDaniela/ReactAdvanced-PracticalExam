@@ -1,0 +1,9 @@
+.layout {
+    min-height: 100vh;
+    margin: 0px;
+    position: relative;
+    min-height: 100vh;
+}
+.layout > div{
+    flex-grow: 1;
+}
