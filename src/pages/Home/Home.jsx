@@ -12,13 +12,12 @@ import DefinitionList from '../../components/DefinitionList/DefinitionList';
 function Home() {
     const presentFavorites = useSelector(showFavorites)
     const def = useSelector(showDefinitions)
-    // console.log(def.error)
     const dispatch = useDispatch();
     function getVal() {
         const val = document.querySelector('#input').value;
         return val;
       }
-
+    
   return (
     <div className='container container-min-max-width'>
      <Layout>
@@ -31,7 +30,7 @@ function Home() {
                 type='text'
                 name='word'
                 required='yes'
-                onChange={(event) =>console.log(event)}
+                // onChange={(event) =>console.log(event)}
             />
             <button
                 aria-label="Cauta"
@@ -59,7 +58,6 @@ function Home() {
                     }else {
                         localStorage.setItem('favoritesWords',newWord)
                     }
-                    console.log(def)
                     dispatch(addF(newWord));
                     }}    
                 >
