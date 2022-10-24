@@ -1,20 +1,20 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
-import { showFavorites } from '../../utils';
+// import {useSelector} from 'react-redux';
+// +-import { showFavorites } from '../../utils';
 
 function DefinitionItem(props) {
   const {id, word, meanings} = props
-  const presentFavorites = useSelector(showFavorites);
-  const index = presentFavorites.findIndex(fav => fav === word)
+  // const presentFavorites = useSelector(showFavorites);
+  // const index = presentFavorites.findIndex(fav => fav === word)
   return (
     <div className='container container-min-max-width'>
       <div className='row mt-5'>
         <div className='container fs-4 text-uppercase fw-bold mt-3 d-flex fav-col-text'>{id} - {word}
-          {
+          {/* {
             (index !== -1)
             ?<div className='pi pi-star-fill'></div> 
             :null
-          }  
+          }   */}
         </div>
       </div>
 

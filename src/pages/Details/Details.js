@@ -15,8 +15,8 @@ function Details() {
             meanings={presentDefinition[0].meanings} 
             partOfSpeech={presentDefinition[0].partOfSpeech}
             word={presentDefinition[0].word}
-            key={presentDefinition[0].index}
-            id={presentDefinition[0].index+1}
+            key={1}
+            id={1}
             ></DefinitionItem>
         </Layout>
     </div>

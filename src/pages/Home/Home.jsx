@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import { addF } from "../../redux/favorites";
+// import { addF } from "../../redux/favorites";
 import { getDefi } from '../../redux/definitionsSlice';
-import { showFavorites } from '../../utils';
+// import { showFavorites } from '../../utils';
 import { showDefinitions } from '../../utils';
 import Layout from '../../components/Layout/Layout';
 import DefinitionList from '../../components/DefinitionList/DefinitionList';
@@ -10,7 +10,7 @@ import DefinitionList from '../../components/DefinitionList/DefinitionList';
 
 
 function Home() {
-    const presentFavorites = useSelector(showFavorites)
+    // const presentFavorites = useSelector(showFavorites)
     const def = useSelector(showDefinitions)
     const dispatch = useDispatch();
     function getVal() {
@@ -23,9 +23,9 @@ function Home() {
      <Layout>
         <br />
         <div className='row my-5 mx-1'>
-            <label className='col-3 col-lg-2 border-info' htmlFor="word"><strong>Introdu cuvantul cautat</strong></label>
+            <label className='col-3 col-lg-2 border-info fs-4' htmlFor="word"><strong>Cauta cuvant</strong></label>
             <input
-                className='col-9 col-lg-6 border-info'
+                className='col-9 col-lg-7 fs-4 border-info'
                 id='input'
                 type='text'
                 name='word'
@@ -34,7 +34,7 @@ function Home() {
             />
             <button
                 aria-label="Cauta"
-                className='col-12 col-md-6 col-lg-2 fav-col'
+                className='col-12 col-md-6 col-lg-3 fav-col fs-4'
                 onClick={() => {
                     let newWord = getVal();
                     dispatch(getDefi(newWord));
@@ -42,7 +42,7 @@ function Home() {
                 >
                     Cauta
                 </button>
-            <button
+            {/* <button
                 aria-label="Adauga la favorite"
                 className='col-12 col-md-6 col-lg-2 fav-col'
                 onClick={() => {
@@ -62,10 +62,10 @@ function Home() {
                     }}    
                 >
                     Adauga la favorite
-                    </button>
+                    </button> */}
         </div>  
 
-            <div>Favorite: {presentFavorites}</div>
+            {/* <div>Favorite: {presentFavorites}</div> */}
             {(def.error !== 'Cuvant inexistent')
             ?null
             :<div className='text-danger fst-italic fs-3'>Cuvantul <strong>{getVal()} </strong>nu exista sau definitie indisponibila.</div>
