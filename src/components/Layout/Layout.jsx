@@ -5,8 +5,8 @@ import './Layout.css'
 function Layout(props) {
   return (
     <div className='layout mt-3'>
-        <Header/>
-            {props.children}
+      <Header />
+      {props.children}
     </div>
   )
 }
